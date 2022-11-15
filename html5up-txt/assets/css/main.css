@@ -193,6 +193,12 @@ input, select, textarea {
 	p, ul, ol, dl, table {
 		margin-bottom: 3em;
 	}
+		.text{
+			font-size: 20px;
+			padding-left: 20px;
+			text-align: center;
+		}
+
 
 /* Section/Article */
 
@@ -1732,6 +1738,7 @@ input, select, textarea {
 
 	.image {
 		position: relative;
+		float: left;
 		display: inline-block;
 		border-radius: 8px;
 	}
@@ -1766,7 +1773,9 @@ input, select, textarea {
 
 		.image.left {
 			float: left;
+			align-content: center;
 			margin: 0 2em 2em 0;
+			width: 60%
 		}
 
 		.image.centered {
