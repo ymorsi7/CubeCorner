@@ -74,6 +74,20 @@ input, select, textarea {
 
 /* Basic */
 
+	.grid-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.cube-image .cube-iamge-div {
+		border: 1px soldi red;
+		height: auto;
+		width: auto;
+		max-width: 10px;
+		max-height: 10px;
+		object-fit: contain;
+	}
+
 	html {
 		box-sizing: border-box;
 	}
