@@ -1786,11 +1786,13 @@ input, select, textarea {
 		}
 
 		.image.left {
-			float: left;
-			align-content: center;
+			/*float: left;*/
+			/*align-content: center;*/
 			margin: 0 2em 2em 0;
-			width: 60%
+			height: 200px;
+			width: 200px;
 		}
+		
 
 		.image.centered {
 			display: block;
