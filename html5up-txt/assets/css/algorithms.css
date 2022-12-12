@@ -3,8 +3,8 @@
 /* Tooltip container */
 .tooltip {
     position: relative;
-    display: inline-block;
-    /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+    /* display: inline-block; */
+    /* w3schools put the line above in the code. however, it makes the algorithm notation look weird. I'm leaving it in for now, just commented */
   }
   
   /* Tooltip text */
