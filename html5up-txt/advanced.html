@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/algorithms.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -64,7 +65,7 @@
 
 											<header>
 												<h2>Full OLL and PLL</h2>
-												<p>Semper amet scelerisque metus faucibus morbi congue mattis</p>
+												<p>You might want to take some time off for this one</p>
 												<ul class="meta">
 													<li class="icon fa-clock">5 days ago</li>
 													<li class="icon fa-comments"><a href="#">1,024</a></li>
@@ -72,7 +73,10 @@
 											</header>
 
 											<section>
-												<span><img src="images/oll_cube.png" alt="" /></span>
+												<div class="tooltip">
+													<span><img src="images/oll_cube.png" alt="" /></span>
+													<span class="tooltiptext">Hover over the notation of some algorithms to get a helpful note!</span>
+												</div>
 												<p>
 													At this point, you will have already learned the beginner CFOP method, which includes 2-Look OLL
 													and PLL using 10 and 6 algorithms, respectively. Now, you will learn
@@ -83,52 +87,20 @@
 												</p>
 											</section>
 
-											<section id="OLL">
+											<section>
 												<h3>OLL</h3>
 												<p>
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-													justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-													ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-													vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-													Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-													rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien
-													vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-													Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-													rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-													Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-													Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.
+													Learning Full OLL
 												</p>
-												<p>
-													Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-													quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-													Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-													fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-													Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-													rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-													Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-													Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-													Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.
-												</p>
+												<p id="OLL"></p>
 											</section>
 
-											<section id="PLL">
+											<section>
 												<h3>PLL</h3>
 												<p>
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-													justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-													ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-													vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-													Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-													rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-													Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-													Phasellus sed nisl vitae.
+													Learning Full PLL
 												</p>
-												<p>
-													Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-													fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-													Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-													Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.
-												</p>
+												<p id="PLL"></p>
 											</section>
 
 										</article>
@@ -329,6 +301,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="algorithms.js"></script>
+
+			<script>
+				getAdvancedAlgorithms("OLL");
+				getAdvancedAlgorithms("PLL");
+			</script>
 
 	</body>
 </html>
