@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="298415856769-ua0vu08cvraagvjo13dh4m3baffahbrf.apps.googleusercontent.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href = "index.css" rel = "stylesheet">
-	<link rel="icon" type="image/x-icon" href="icon.png">
+    <meta name="google-signin-client_id"
+        content="298415856769-ua0vu08cvraagvjo13dh4m3baffahbrf.apps.googleusercontent.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <title>CubeCorner Login</title>
 </head>
+
 <body>
-    <h2 class = "alert alert-primary">CubeCorner</h2>
+    <h2 class="alert alert-primary">CubeCorner</h2>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <div class = "data">
+    <div class="data">
         <p>Name</p>
-        <p id = "name" class = "alert alert-success"></p>
+        <p id="name" class="alert alert-success"></p>
         <p>Profile Picture</p>
-        <img class = "rounded-circle" width = "100" height ="100" />
+        <img class="rounded-circle" width="100" height="100" />
         <p>Email</p>
-        <p id = "email"></p>
-        <button type = "button" class = "btn btn-danger" onclick = "signOut()">Sign Out</button>
+        <p id="email"></p>
+        <button type="button" class="btn btn-danger" onclick="signOut()">Sign Out</button>
     </div>
-    <script src = "index.js"></script>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            $("#name").text(profile.getName());
+            $("#email").text(profile.getEmail());
+            $("#image").attr("src", profile.getImageUrl());
+            $(".data").css("display", "block");
+            $(".g-signin2").css("display", "none");
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                alert("You have been signed out successfully");
+                $(".g-signin2").css("display", "block");
+                $(".data").css("display", "none");
+            });
+        }
+    </script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 </body>
+
 </html>
