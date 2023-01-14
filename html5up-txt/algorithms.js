@@ -9,6 +9,7 @@ var switchCurrentAlgorithm
 var algorithmsJSON
 var currentAlgorithm
 var returnAlgorithms
+var learnedAlg
 const algorithms = {
     "algorithms": [
         { // OLL
@@ -620,7 +621,7 @@ function getAlgorithms(complexity, set) {
             }
 
             returnAlgorithms += "<tr>"+
-            "<td><p class='alg'>" + currentAlgorithm.name + "</p></td>"+
+            "<td><p id='alg" + universalID + "' class='alg' onclick='learnAlgorithms(" + universalID + ")'>" + currentAlgorithm.name + "</p></td>"+
             "<td><div class='alg'><img src='" + imagePath + "'></image></td>"+notation+
             "<td><p class='alg'>" + currentAlgorithm.subSet + "</p></td>"+
             "</tr>";
@@ -647,6 +648,18 @@ function switchAlgorithm(algorithmIndex, algorithmID) {
                 switchAlgorithmElement.innerHTML = "1: " + switchAlgorithmJSON[0];
             }
         }
+    }
+}
+
+function learnAlgorithms(algorithmID) {
+    // window.alert("I was clicked by algorithm " + algorithmID);
+    learnedAlg = document.getElementById("alg" + algorithmID);
+    
+
+    if (learnedAlg.style.background == "chartreuse") {
+        learnedAlg.style.background = "";
+    } else {
+        learnedAlg.style.background = "chartreuse";
     }
 }
 
